@@ -151,3 +151,54 @@ console.log("BREADTH-FIRST SEARCH");
 tree.traverseBF(function (node) {
     console.log(node.data)
 });
+
+// Example 3: Maps
+
+console.log("MAPS EXAMPLE");
+
+const person = new Map([
+    ['name', 'David'],
+    ['age', 23]
+]);
+
+// person.forEach((value,key) => {
+//     console.log(value, key);
+// });
+
+for(let key of person.keys()) {
+    console.log(key);
+}
+
+for(let value of person.values()) {
+    console.log(value);
+}
+
+for(let entry of person.entries()) {
+    console.log(entry);
+}
+
+console.log('EXAMPLE: Delete');
+person.delete('name');
+
+for(let entry of person.entries()) {
+    console.log(entry);
+}
+
+console.log('EXAMPLE: clear');
+person.clear();
+
+for(let entry of person.entries()) {
+    console.log("test...");
+    console.log(entry);
+}
+
+person.set('name', 'Carolyn');
+person.set('age', 24);
+
+for(let entry of person.entries()) {
+    console.log(entry);
+}
+
+person.forEach((value) => {
+    console.log(value);
+});
