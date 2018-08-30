@@ -20,6 +20,7 @@ function Queue() {
 }
 
 // Example 1: Classes in Vanilla JavaScript
+console.error("*** Example 1: Vanilla Classes ***");
 
 function Person(name, age) {
     this.name = name;
@@ -32,11 +33,15 @@ Person.prototype.greet = function () {
 
 // Example 1.1
 
+
 let steve = new Person("Steve", 27);
 console.log(steve.greet());
 
 // Exmaple 2: Trees in Vanilla JavaScript
 // https://code.tutsplus.com/articles/data-structures-with-javascript-tree--cms-23393
+
+console.error("*** Example 2: Tree ***");
+
 function Node(data) {
     this.data = data;
     this.parent = null;
@@ -140,13 +145,13 @@ tree._root.children[2].children[0].parent = tree._root.children[2];
  
  */
 
-console.log("DEPTH-FIRST SEARCH");
+console.error("*** DEPTH-FIRST SEARCH ***");
 
 tree.traverseDF(function (node) {
     console.log(node.data)
 });
 
-console.log("BREADTH-FIRST SEARCH");
+console.error("*** BREADTH-FIRST SEARCH ***");
 
 tree.traverseBF(function (node) {
     console.log(node.data)
@@ -154,7 +159,7 @@ tree.traverseBF(function (node) {
 
 // Example 3: Maps
 
-console.log("MAPS EXAMPLE");
+console.error("*** Example 3: Maps ***");
 
 const person = new Map([
     ['name', 'David'],
@@ -194,10 +199,6 @@ for(let entry of person.entries()) {
 
 person.set('name', 'Carolyn');
 person.set('age', 24);
-
-for(let entry of person.entries()) {
-    console.log(entry);
-}
 
 person.forEach((value) => {
     console.log(value);
