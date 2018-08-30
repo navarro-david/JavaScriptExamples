@@ -70,15 +70,15 @@ Tree.prototype.traverseBF = function (callback) {
 
     queue.enqueue(this._root);
 
-    currentTree = queue.dequeue();
+    let currentNode = queue.dequeue();
 
-    while (currentTree) {
-        for (var i = 0, length = currentTree.children.length; i < length; i++) {
-            queue.enqueue(currentTree.children[i]);
+    while (currentNode) {
+        for (var i = 0, length = currentNode.children.length; i < length; i++) {
+            queue.enqueue(currentNode.children[i]);
         }
 
-        callback(currentTree);
-        currentTree = queue.dequeue();
+        callback(currentNode);
+        currentNode = queue.dequeue();
     }
 };
 
